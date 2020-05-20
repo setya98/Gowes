@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main.xml"
+    app:startDestination="@id/product_dest">
+
+    <fragment
+        android:id="@+id/event_dest"
+        android:name="com.example.bike.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" >
+        <action
+            android:id="@+id/action_event_dest_to_fragmentItemEvent"
+            app:destination="@id/fragmentItemEvent" />
+    </fragment>
+    <fragment
+        android:id="@+id/cart_dest"
+        android:name="com.example.bike.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cart_dest_to_fragmentItemCart"
+            app:destination="@id/fragmentItemCart" />
+    </fragment>
+    <fragment
+        android:id="@+id/product_dest"
+        android:name="com.example.bike.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" >
+        <argument android:name="ProductArg" />
+        <action
+            android:id="@+id/action_detail_product"
+            app:destination="@id/detail_product_dest"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_dest"
+        android:name="com.example.bike.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/detail_product_dest"
+        android:name="com.example.bike.FragmentDetailProduct"
+        android:label="fragment_detail_product2"
+        tools:layout="@layout/fragment_detail_product2" />
+    <fragment
+        android:id="@+id/fragmentDetailEvent"
+        android:name="com.example.bike.FragmentDetailEvent"
+        android:label="fragment_detail_event2"
+        tools:layout="@layout/fragment_detail_event2" />
+    <fragment
+        android:id="@+id/fragmentItemEvent"
+        android:name="com.example.bike.FragmentItemEvent"
+        android:label="fragment_item_event"
+        tools:layout="@layout/fragment_item_event" >
+        <action
+            android:id="@+id/action_fragmentItemEvent_to_fragmentDetailEvent"
+            app:destination="@id/fragmentDetailEvent" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentItemCart"
+        android:name="com.example.bike.FragmentItemCart"
+        android:label="fragment_item_cart2"
+        tools:layout="@layout/fragment_item_cart2" />
+    <fragment
+        android:id="@+id/fragmentItemNotification2"
+        android:name="com.example.bike.FragmentItemNotification2"
+        android:label="fragment_item_notification2"
+        tools:layout="@layout/fragment_item_notification2" />
+    <fragment
+        android:id="@+id/fragmentChangeEmail"
+        android:name="com.example.bike.FragmentChangeEmail"
+        android:label="fragment_change_email2"
+        tools:layout="@layout/fragment_change_email2" />
+    <fragment
+        android:id="@+id/fragmentChangeNumber"
+        android:name="com.example.bike.FragmentChangeNumber"
+        android:label="fragment_change_number2"
+        tools:layout="@layout/fragment_change_number2" />
+    <fragment
+        android:id="@+id/fragmentChangePassword"
+        android:name="com.example.bike.FragmentChangePassword"
+        android:label="fragment_change_password2"
+        tools:layout="@layout/fragment_change_password2" />
+</navigation>
